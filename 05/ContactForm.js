@@ -1,4 +1,5 @@
 import React, { useReducer } from 'react';
+import './ContactForm.css';
 
 // import account from './account';
 
@@ -84,7 +85,11 @@ const ContactForm = () => {
           value={state.values.name}
           onChange={handleChange}
         />
-        {state.errors.name && <div style={{ color: 'red' }}>{state.errors.name}</div>}
+        {state.errors.name && (
+          <div className="error" style={{ color: 'red' }}>
+            {state.errors.name}
+          </div>
+        )}
       </div>
 
       <div>
@@ -96,7 +101,11 @@ const ContactForm = () => {
           value={state.values.email}
           onChange={handleChange}
         />
-        {state.errors.email && <div style={{ color: 'red' }}>{state.errors.email}</div>}
+        {state.errors.email && (
+          <div className="error" style={{ color: 'red' }}>
+            {state.errors.email}
+          </div>
+        )}
       </div>
       <div>
         <label htmlFor="phone">Phone</label>
@@ -107,7 +116,11 @@ const ContactForm = () => {
           value={state.values.phone}
           onChange={handleChange}
         />
-        {state.errors.phone && <div style={{ color: 'red' }}>{state.errors.phone}</div>}
+        {state.errors.phone && (
+          <div className="error" style={{ color: 'red' }}>
+            {state.errors.phone}
+          </div>
+        )}
       </div>
       <div>
         <label htmlFor="subject">Subject</label>
@@ -118,7 +131,11 @@ const ContactForm = () => {
           value={state.values.subject}
           onChange={handleChange}
         />
-        {state.errors.subject && <div style={{ color: 'red' }}>{state.errors.subject}</div>}
+        {state.errors.subject && (
+          <div className="error" style={{ color: 'red' }}>
+            {state.errors.subject}
+          </div>
+        )}
       </div>
       <div>
         <label htmlFor="message">Message</label>
@@ -128,10 +145,14 @@ const ContactForm = () => {
           value={state.values.message}
           onChange={handleChange}
         />
-        {state.errors.message && <div style={{ color: 'red' }}>{state.errors.message}</div>}
+        {state.errors.message && (
+          <div className="error" style={{ color: 'red' }}>
+            {state.errors.message}
+          </div>
+        )}
       </div>
       <button type="submit">Send form</button>
-      {state.isSubmitted && <p>Form sent successfully!</p>}
+      {state.isSubmitted && <p className="success">Form sent successfully!</p>}
     </form>
   );
 };
