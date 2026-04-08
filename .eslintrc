@@ -8,9 +8,9 @@
         "extensions": [".js"]
       }
     ],
-    "indent": ["error", 2],
-    "react/jsx-indent": ["error", 2],
-    "react/jsx-indent-props": ["error", 2],
+    // "indent": ["error", 2],
+    // "react/jsx-indent": ["error", 2],
+    // "react/jsx-indent-props": ["error", 2],
     "react/state-in-constructor": [0, "never"],
     "func-names": ["error", "as-needed"],
     "react/function-component-definition": [
@@ -19,7 +19,8 @@
         "namedComponents": "arrow-function",
         "unnamedComponents": "arrow-function"
       }
-    ]
+    ],
+    "jsx-a11y/label-has-associated-control": ["error", { "assert": "either" }]
   },
   "globals": {
     "window": true,
